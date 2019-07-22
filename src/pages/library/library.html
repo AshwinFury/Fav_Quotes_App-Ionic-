@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-buttons left padding-left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>Library</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <hr>
+    <button ion-item *ngFor="let quotecategory of quotesCollection" [navPush]="gotoquotes" [navParams]="quotecategory">
+      <ion-icon [name]="quotecategory.icon" item-left></ion-icon>
+      <h2>{{quotecategory.category}}</h2>
+      <p>{{quotecategory.quotes.length}} Quotes</p>
+    </button>
+
+  </ion-list>
+
+</ion-content>

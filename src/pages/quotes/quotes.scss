@@ -1,0 +1,13 @@
+page-quotes {
+  .person{
+    color:lightslategrey;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+
+    &:before{
+      content: '-';
+    }
+  }
+
+}
